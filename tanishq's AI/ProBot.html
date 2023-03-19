@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <title>ProBot</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        #user{
+width: 80%;
+height: 50px;
+padding: 0px;
+font-size: 50px;
+text-transform: capitalize;
+position: absolute;
+top: 90%;
+border: none;
+background: transparent;
+border-bottom: 2px solid black;
+margin-left: 2%;
+background: white;
+        }
+
+        ::placeholder{
+            font-size: 40px;
+            text-transform: capitalize;
+            color: #3a3a3a;
+        }
+        #submit{
+            height: 45px;
+            width: 10%;
+            position: absolute;
+            top: 91%;
+            left: 87%;
+            font-size: 220%;
+            border-radius: 20px;
+            box-shadow: 4px 4px 7px;
+            box-shadow: inset 4px 4px 7px;
+    
+
+        }
+        #submit:hover{
+background: #cac9c9;
+        }
+        h1{
+            text-transform: capitalize;
+            font-size: 70px;
+            text-align: center;
+        }
+        #print{
+            margin: 10%;
+            
+        }
+        h2{
+            text-transform: capitalize;
+            font-size: 30px;
+            margin: 0px;
+            text-align: center;
+            background: #000;
+            color: aliceblue;
+            display: inline-block;
+        }
+.img{
+    width: 20%;
+    overflow: hidden;
+    height: 70%;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    animation: img 5s ;
+}
+@keyframes img {
+    0%{opacity: 0; }
+    2%{opacity: 1; }
+    4%{opacity: 0; }
+    6%{opacity: 1;}
+    8%{opacity: 0; }
+    10%{opacity: 1; }
+    20%{opacity: 0; }
+    100%{opacity: 1; }
+}
+nav{
+    background: #000;
+    padding: 10px;
+}
+.navv{
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 25px;
+
+}
+.navv:hover{
+    text-decoration: underline;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.navvv{
+    color: black;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 300px;
+    font-size: 35px;
+    font-weight: bolder;
+    background: white;
+    width: 130px;
+    text-align: center;
+    border-radius: 10px;
+}
+.conn{
+    background: lightskyblue;
+    border: none;
+    color:black;
+    font-size: 25px;
+    border-radius: 10px;
+    display: block;
+    float: right;
+    padding: 3px;
+}
+
+.con{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 350px) and (max-width:450px) {
+    .navv{
+        margin-left:10px;
+        margin-top: 70px;
+    }
+    nav{
+        width: 100%;
+        height: 100px;
+    }
+    .navvv{
+        position: absolute;
+        left: -170px;
+    }
+    .conn{
+      
+        margin-top: 70px;
+    }
+
+    #user{
+        top: 95%;
+    }
+    #submit{
+        width: 70px;
+        top: 97%;
+        font-size: 20px;
+        left: 84%;
+
+    }
+}
+#name{
+width: 400px;
+border: none;
+outline: none;
+border-bottom: 2px solid white;
+font-size: 35px;
+text-align: center;
+text-transform: capitalize;
+position: absolute;
+top: 1%;
+left: 70%;
+background: transparent;
+z-index: 10;
+color: white;
+}
+h1{
+    margin-top: 170px;
+}
+.sub{
+    display: block;
+    margin: 30px auto;
+    font-size: 30px;
+    border-radius: 20px;
+    width: 200px;
+    cursor: pointer;
+}
+.sub:hover{
+    background: rgb(179, 179, 179);
+}
+.error{
+    color: red;
+    font-size: 20px;
+    margin-left: 20px;
+}
+::placeholder{
+color: gray;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+<div class="navv"><a href="ProBot.html" class="a">home</a></div>
+<div class="navv"><a href="about.html" class="a">about</a></div>
+<div class="navv"><a href="Credit.html" class="a">credits</a></div>
+<div class="navv"><a href="contact.html"class="a">Contact Us</a></div>
+<div class="navvv">ProBot</div>
+    </nav>
+    <div id="print"></div>
+    <input type="text" name="user" id="user" placeholder="talk here" onkeydown="func_"> 
+    <input type="text" id="name" placeholder="Name here" autocomplete="off">
+    <input type="submit" onclick="func_()" id="submit" value="Enter">
+<script src="chat.js"></script>
+</body>
+</html>

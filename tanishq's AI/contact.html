@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="sign.png">
+    <title>ProBot</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+    background: #000;
+    padding: 10px;
+}
+.navv{
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 25px;
+
+}
+.navv:hover{
+    text-decoration: underline;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.navvv{
+    color: black;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 300px;
+    font-size: 35px;
+    font-weight: bolder;
+    background: white;
+    width: 130px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.con{
+    background: lightskyblue;
+    border: none;
+    color:black;
+    font-size: 25px;
+    border-radius: 10px;
+    display: block;
+    float: right;
+    padding: 3px;
+}
+
+h2{
+    font-size: 60px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+@media screen and (min-width: 350px) and (max-width:450px) {
+    .navv{
+        margin-left:10px;
+        margin-top: 70px;
+    }
+    nav{
+        width: 100%;
+        height: 100px;
+    }
+    .navvv{
+        position: absolute;
+        left: -170px;
+    }
+    .conn{
+      
+        margin-top: 70px;
+        display:non;
+        color: black;
+
+    }
+.con{
+    margin-top: 70px;
+}
+    #user{
+        top: 95%;
+    }
+    #submit{
+        width: 70px;
+        top: 97%;
+        font-size: 20px;
+        left: 84%;
+
+    }
+
+    .hh{
+        font-size: 26px;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+ 
+h2{
+    font-size: 50px;
+}
+
+.conn{
+    color: black;
+}
+.container{
+    width: 40%;
+    border: 1px solid black;
+    margin: 100px auto;
+    background: white;
+
+}
+::placeholder{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font: arial;
+}
+.in{
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    width: 90%;
+    margin: 20px auto;
+    border: none;
+    border-bottom: 4px solid black;
+    background: transparent;
+    opacity: 1;
+    box-shadow: inset 0px 5px 6px ;
+}
+
+
+#msg{
+    display: flex;
+    margin: 10px auto;
+    background: transparent;
+    font-size: 30px;
+    border: 4px solid black;
+    box-shadow: inset 0px 5px 6px ;
+    border: none;
+    border-bottom: 4px solid black;
+}
+
+.bg{
+    height: 91vh;
+    width: 100%;
+    position: fixed;
+    z-index: -199;
+}
+#submit{
+    width: 30%;
+    background: white;
+    border: 4px solid black;
+    width: auto;
+    display: flex;
+    margin: 10px auto;
+    font-size: 40px;
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 6px;
+    
+}
+#name{
+    text-transform: capitalize;
+}
+ </style>
+    </head>
+    <body>
+        <nav>
+            <div class="navv"><a href="ProBot.html">home</a></div>
+            <div class="navv"><a href="about.html"> about</a></div>
+            <div class="navv"><a href="Credit.html">credits</a></div>
+            <div class="navv"><a href="contact.html">Contact Us</a></div>
+            <div class="navvv">ProBot</div>
+        </nav>
+<!-- <div class="bg"><img src="ai.jpg" alt="wrror" class="bg"></div> -->
+<div class="container" >
+    <form onsubmit="sed(); reset(); return false ">
+        <input type="text" id="name" class="in" placeholder="Name" maxlength="15" minlength="2" autocomplete="off" required>
+        <input type="number" id="phone" class="in" placeholder= "Phone.No" maxlength="11" minlength="9"  required>
+        <textarea name="msg" id="msg" cols="32" rows="4" placeholder="Message" maxlength="100" minlength="10" required></textarea>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+
+
+function sed(){
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "tanishqparmar83@gmail.com",
+    Password : "C32EF63E705396599090B0425592D4E36705",
+    To : 'tanishqparmar83@gmail.com',
+    From : "tanishqparmar83@gmail.com",
+    Subject : "user Message From ProBot",
+    Body : `<html>
+    <head>
+        <style>
+            h1{
+                font-size: 35px;
+            }
+            .h1{
+                text-decoration: underline;
+            }
+            .h{
+                text-decoration: underline;
+                text-transform: capitalize;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="boxpt">
+        <h1>Name:</h1>
+        <h1 class="h">` + document.getElementById("name").value + `</h1> <br><br>
+        </div>
+
+
+        <div class="boxpt">
+        <h1>Phone No. :</h1>
+        <h1 class="h1">` + document.getElementById("phone").value + `</h1> <br><br>
+        </div>
+
+        <div class="boxpt">
+        <h1>Messgae:</h1>
+        <h1 class="h1">` + document.getElementById("msg").value + `</h1><br><br>
+        </div>
+        </div>
+    </body>
+</html>`
+
+    
+}).then(
+  message => alert("Sent Message")
+);
+}
+</script>
+    </body>
